@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'HealthyNet',
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
