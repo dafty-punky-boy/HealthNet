@@ -1,77 +1,39 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AfrontamientoPage extends StatelessWidget {
+  const AfrontamientoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.deepOrange,
-          title: const Text(
-            'INICIO',
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.blue[500],
+        title: const Text(
+            '',
             style: TextStyle(
               fontWeight: FontWeight.bold,
             )
-          ),
-          actions: <Widget>[
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/crisispage');
-                },
-                icon: const Icon(
-                    Icons.gpp_maybe_rounded,
-                  size: 38,
-                )
-            )
-          ],
         ),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/crisispage');
+              },
+              icon: const Icon(
+                Icons.gpp_maybe_rounded,
+                size: 38,
+              )
+          )
+        ],
+      ),
         body: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   const SizedBox(height: 5),
-                  // Estrategias de afrontamiento
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/afrontamientopage');
-                    },
-                    child: Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(25),
-                        decoration: BoxDecoration(
-                          color: Colors.blue[500],
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        height: 200,
-                        width: 350,
-                        child: const ListTile(
-                          leading: Icon(
-                              Icons.accessibility_new_sharp,
-                              color: Colors.white,
-                              size: 64
-                          ),
-                          title: Text(
-                              'Estrategias de Afrontamiento',
-                              style: TextStyle(
-                                fontSize: 24,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                          ),
-                          subtitle: Text(
-                            'Maneja situaciones dificiles',
-                            style: TextStyle(
-                              color: Colors.white
-                            )
-                          ),
-                        )
-                    ),
-                  ),
-
-                  // Activación conductual
+                  // Patrones negativos de pensamiento
                   GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, '/conductualpage');
@@ -80,19 +42,19 @@ class HomePage extends StatelessWidget {
                         alignment: Alignment.center,
                         padding: EdgeInsets.all(25),
                         decoration: BoxDecoration(
-                          color: Colors.pink[500],
+                          color: Colors.red[500],
                           borderRadius: BorderRadius.circular(20),
                         ),
                         height: 200,
                         width: 350,
                         child: const ListTile(
                           leading: Icon(
-                              Icons.add_reaction_rounded,
-                              color: Colors.white,
+                              Icons.cloudy_snowing,
+                              color: Colors.grey,
                               size: 64
                           ),
                           title: Text(
-                            'Activación Conductual',
+                            'Patrones Negativos de Pensamiento',
                             style: TextStyle(
                               fontSize: 24,
                               color: Colors.white,
@@ -100,7 +62,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           subtitle: Text(
-                              'Mantente activo para sentirte mejor',
+                              'Identifica y desafía a esa voz negativa en tu cabeza',
                               style: TextStyle(
                                   color: Colors.white
                               )
@@ -109,25 +71,25 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
 
-                  // Diario de auto-monitoreo
+                  // Consejos para lidiar con el estres
                   GestureDetector(
                     child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.all(25),
                         decoration: BoxDecoration(
-                          color: Colors.lightGreen,
+                          color: Colors.amber[500],
                           borderRadius: BorderRadius.circular(20),
                         ),
                         height: 200,
                         width: 350,
                         child: const ListTile(
                           leading: Icon(
-                              Icons.auto_stories,
+                              Icons.sunny,
                               color: Colors.white,
                               size: 64
                           ),
                           title: Text(
-                            'Diario Personal',
+                            'Estrategias para manejar el estrés',
                             style: TextStyle(
                               fontSize: 24,
                               color: Colors.white,
@@ -135,7 +97,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           subtitle: Text(
-                              'Organiza tus pensamientos y sentimientos',
+                              'Resiste y supera la adversidad',
                               style: TextStyle(
                                   color: Colors.white
                               )
