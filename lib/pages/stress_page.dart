@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-class NegativoPage extends StatelessWidget {
-  const NegativoPage({super.key});
+class StressPage extends StatelessWidget {
+  const StressPage({super.key});
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.amber[500],
         title: const Text(
-            'PATRONES NEGATIVOS',
+            'MANEJO DE ESTRÉS',
             style: TextStyle(
               fontWeight: FontWeight.bold,
             )
@@ -27,6 +26,7 @@ class NegativoPage extends StatelessWidget {
           )
         ],
       ),
+
       body: Center(
         child: ListView(
           children: <Widget>[
@@ -36,14 +36,14 @@ class NegativoPage extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.blue[500],
+                color: Colors.green[500],
               ),
               height: 380,
               width: 350,
               child: const Column(
                 children: [
                   Text(
-                      'Cuando nos sentimos mal tendemos a caer en ciertos patrones de pensamiento que nos hacen sentir aún peor.',
+                      'Las situaciones difíciles son parte de la vida. El estrés surge como una respuesta natural a este tipo de situaciones.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class NegativoPage extends StatelessWidget {
                   SizedBox(height: 25),
 
                   Text(
-                      'Se trata de una respuesta natural de nuestra mente, una estrategia de supervivencia que puede llegar a causarnos más mal que bien.',
+                      'Si bien el estrés es una respuesta que busca prepararnos para afrontar estos problemas, a veces puede resultar inconveniente cuando se tiene un grado de estrés demasiado alto.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -67,7 +67,7 @@ class NegativoPage extends StatelessWidget {
                   SizedBox(height: 25),
 
                   Text(
-                      'Desliza hacia abajo para saber más acerca de estos patrones. Para detener sus efectos negativos es importante identificarlos. ¿Haz caido en alguno de estos patrones recientemente?',
+                      'Desliza hacia abajo para ver estrategias y consejos para manejar el estrés de mejor forma. Trata de practicar lo que aprendes en tu día a día.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -81,20 +81,20 @@ class NegativoPage extends StatelessWidget {
               ),
             ),
 
-            // Todo o nada
+            // Evitar conflictos
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.pink[500],
+                color: Colors.blue[500],
               ),
-              height: 560,
+              height: 630,
               width: 350,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                      'Todo o Nada',
+                      'Evita Conflictos En Tu Cronograma',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -105,12 +105,12 @@ class NegativoPage extends StatelessWidget {
 
                   const SizedBox(height: 15),
 
-                  Image.asset('lib/images/all-or-nothing-thinking.jpg'),
+                  Image.asset('lib/images/cronograma.jpg'),
 
                   const SizedBox(height: 25),
 
                   const Text(
-                      'Ver las cosas en blanco o negro, sin matices, sin nada en el medio. Todo es o perfecto o un fracaso completo. O es o no es. Siempre ocurre o nunca.',
+                      'Usa una agenda diaria, tu teléfono o un calendario en línea para llevar un seguimiento de las citas y actividades.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -122,7 +122,7 @@ class NegativoPage extends StatelessWidget {
                   const SizedBox(height: 25),
 
                   const Text(
-                      'Pensar de esta forma te predispone a concentrarte en lo que no va bien, resaltar lo malo de las situaciones, las personas, y de ti mismo. Terminas ignorando las cosas buenas que también están ahí. Te hunde en la frustración y decepción.',
+                    'Cuando programes actividades, deja tiempo suficiente para terminar una actividad antes de empezar la siguiente.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -131,37 +131,10 @@ class NegativoPage extends StatelessWidget {
                       )
                   ),
 
+                  const SizedBox(height: 25),
 
-                ],
-              ),
-            ),
-
-
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(25),
-              decoration: BoxDecoration(
-                color: Colors.green[500],
-              ),
-              height: 400,
-              width: 350,
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                      '¿Cómo enfrentarlo?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 28,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Recuerda que la perfección no existe y que intentar ser perfecto no tiene sentido.',
+                  const Text(
+                      ' No programes demasiadas actividades para el mismo día o la misma semana, especialmente si son actividades para las que debes prepararte.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -170,29 +143,6 @@ class NegativoPage extends StatelessWidget {
                       )
                   ),
 
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Busca progreso. No puedes ser perfecto, pero SÍ puedes ser mejor. Intenta apreciar los pequeños pasos que has dado en dirección a donde quieres llegar.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Intenta agregar matices a lo que piensas y dices. Evita generalizar e intenta hablar y pensar utilizando palabras como "A veces" en lugar de "Siempre" o "Nunca".',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
 
                 ],
               ),
@@ -203,15 +153,15 @@ class NegativoPage extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.pink[500],
+                color: Colors.deepPurple[500],
               ),
-              height: 640,
+              height: 540,
               width: 350,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                      'Filtro Mental',
+                      'Reconoce Tus Limites',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -222,12 +172,12 @@ class NegativoPage extends StatelessWidget {
 
                   const SizedBox(height: 15),
 
-                  Image.asset('lib/images/mental-filter.png'),
+                  Image.asset('lib/images/limits.webp'),
 
                   const SizedBox(height: 25),
 
                   const Text(
-                      'Cuando un suceso, frecuentemente malo, desencadena en ti una serie de pensamientos negativos incluso en momentos o hacia cosas que no son negativas en sí.',
+                      'Si no tienes tiempo, energía o interés, está bien negarte amablemente cuando las personas te piden que asumas tareas.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -239,7 +189,7 @@ class NegativoPage extends StatelessWidget {
                   const SizedBox(height: 25),
 
                   const Text(
-                      'De todas las cosas que van bien eliges algún detalle negativo y centras toda tu atención en él, provocando un flujo de pensamientos negativos que opacan todo lo demás.',
+                      'No te sientas culpable por decir "NO".',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -248,61 +198,20 @@ class NegativoPage extends StatelessWidget {
                       )
                   ),
 
+                  const SizedBox(height: 25),
 
+                  const Text(
+                      'No trates de realizar proyectos que harían que tu carga laboral sea inmanejable. Reconoce que tanto puedes hacer de manera sostenible emocionalmente.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 18,
+                      )
+                  ),
                 ],
               ),
             ),
-
-
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(25),
-              decoration: BoxDecoration(
-                color: Colors.green[500],
-              ),
-              height: 380,
-              width: 350,
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                      '¿Cómo enfrentarlo?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 28,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Recuerda que la situación no es tan mala en sí, sino que eres tú quien la empeora enfocandote en los aspectos negativos de la misma.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Intenta ver las cosas desde otra perspectiva, intenta darle más peso a lo bueno que a lo malo y resiste los impulsos de volver a filtrar y desencadenar todos esos pensamientos negativos alrededor de la situación.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
-
-                ],
-              ),
-            ),
-
 
             // Razonamiento emocional
             Container(
@@ -317,7 +226,7 @@ class NegativoPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                      'Razonamiento Emocional',
+                      'Prioriza Tus Tareas',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -353,58 +262,6 @@ class NegativoPage extends StatelessWidget {
                         fontSize: 18,
                       )
                   ),
-
-
-                ],
-              ),
-            ),
-
-
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(25),
-              decoration: BoxDecoration(
-                color: Colors.green[500],
-              ),
-              height: 400,
-              width: 350,
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                      '¿Cómo enfrentarlo?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 28,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Recuerda que los sentimientos son reacciones a las situaciones. Acepta lo que sientes y trata de procesarlo mientras evitas que la emoción se desborde y te derribe.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
-
-                  SizedBox(height: 25),
-
-                  Text(
-                      'Las emociones se desbordan menos si vivimos más tranquilamente. Busca hacer cosas que te ayuden a mantenerte en calma antes, durante y despues de una crisis.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18,
-                      )
-                  ),
-
                 ],
               ),
             ),

@@ -73,6 +73,9 @@ class AfrontamientoPage extends StatelessWidget {
 
                   // Consejos para lidiar con el estres
                   GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/stresspage');
+                    },
                     child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.all(25),
