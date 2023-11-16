@@ -36,7 +36,7 @@ class AfrontamientoPage extends StatelessWidget {
                   // Patrones negativos de pensamiento
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/conductualpage');
+                      Navigator.pushNamed(context, '/negativopage');
                     },
                     child: Container(
                         alignment: Alignment.center,
