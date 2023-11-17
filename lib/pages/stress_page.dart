@@ -213,14 +213,14 @@ class StressPage extends StatelessWidget {
               ),
             ),
 
-            // Razonamiento emocional
+            // Priorizar Tareas
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.pink[500],
+                color: Colors.deepOrangeAccent,
               ),
-              height: 630,
+              height: 580,
               width: 350,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -237,12 +237,12 @@ class StressPage extends StatelessWidget {
 
                   const SizedBox(height: 15),
 
-                  Image.asset('lib/images/emotional-reasoning.jpg'),
+                  Image.asset('lib/images/prioritize.png'),
 
                   const SizedBox(height: 25),
 
                   const Text(
-                      'Pensar que algo es cierto porque siento que es cierto. Cuando tomamos una emoción y la usamos para explicar toda nuestra realidad.',
+                      'Haz una lista de las cosas que haces habitualmente, como actividades laborales y tareas domésticas.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -254,7 +254,7 @@ class StressPage extends StatelessWidget {
                   const SizedBox(height: 25),
 
                   const Text(
-                      'Pensar de esta forma nos puede llevar a concluir cosas incorrectamente. Por ejemplo, si estas ansioso por conocer a una persona nueva, podrías concluir que es algo negativo que deberías de evitar, cuando esto no es así.',
+                      'Clasifica estas cosas según su importancia, teniendo en cuenta las cosas que debes hacer y las cosas que son más importantes para ti. Si no tienes tiempo para hacerlo todo, concéntrate en las tareas y actividades de la parte superior de tu lista.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
