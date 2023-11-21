@@ -113,6 +113,9 @@ class HomePage extends StatelessWidget {
 
                   // Diario de auto-monitoreo
                   GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/diarypage');
+                    },
                     child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.all(25),
