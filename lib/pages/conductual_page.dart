@@ -13,6 +13,7 @@ class ConductualPage extends StatelessWidget {
             'ACTIVACIÓN CONDUCTUAL',
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             )
         ),
         actions: <Widget>[
@@ -22,6 +23,7 @@ class ConductualPage extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.gpp_maybe_rounded,
+                color: Colors.white,
                 size: 38,
               )
           )

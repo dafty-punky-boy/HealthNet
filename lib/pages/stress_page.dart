@@ -12,6 +12,7 @@ class StressPage extends StatelessWidget {
             'MANEJO DE ESTRÉS',
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             )
         ),
         actions: <Widget>[
@@ -21,6 +22,7 @@ class StressPage extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.gpp_maybe_rounded,
+                color: Colors.white,
                 size: 38,
               )
           )

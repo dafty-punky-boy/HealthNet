@@ -13,6 +13,7 @@ class CrisisPage extends StatelessWidget {
             'APOYO DE CRISIS',
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             )
         ),
       ),

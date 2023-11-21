@@ -22,6 +22,7 @@ class AfrontamientoPage extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.gpp_maybe_rounded,
+                color: Colors.white,
                 size: 38,
               )
           )
