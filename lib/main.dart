@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         '/crisispage' : (context) => CrisisPage(),
         '/negativopage' : (context) => NegativoPage(),
         '/stresspage' : (context) => StressPage(),
-        '/diarypage' : (context) => HomeScreen(),
+        '/diarypage' : (context) => DiaryPage(),
       },
     );
   }

@@ -6,14 +6,14 @@ import 'package:proyecto/constants/colors.dart';
 import 'package:proyecto/models/note.dart';
 import 'package:proyecto/pages/edit_page.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class DiaryPage extends StatefulWidget {
+  const DiaryPage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DiaryPage> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<DiaryPage> {
   List<Note> filteredNotes = [];
   bool sorted = false;
 
@@ -61,7 +61,29 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.lightGreen,
+        title: const Text(
+            'DIARIO PERSONAL',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            )
+        ),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/crisispage');
+              },
+              icon: const Icon(
+                Icons.gpp_maybe_rounded,
+                color: Colors.white,
+                size: 38,
+              )
+          )
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
         child: Column(
@@ -69,10 +91,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                /*const Text(
                   'Notes',
-                  style: TextStyle(fontSize: 30, color: Colors.white),
-                ),
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),*/
                 IconButton(
                     onPressed: () {
                       setState(() {
@@ -84,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 40,
                       height: 40,
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade800.withOpacity(.8),
+                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
                       child: const Icon(
                         Icons.sort,
@@ -101,13 +123,13 @@ class _HomeScreenState extends State<HomeScreen> {
               style: const TextStyle(fontSize: 16, color: Colors.white),
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
-                hintText: "Search notes...",
-                hintStyle: const TextStyle(color: Colors.grey),
+                hintText: "Buscar...",
+                hintStyle: const TextStyle(color: Colors.white),
                 prefixIcon: const Icon(
                   Icons.search,
-                  color: Colors.grey,
+                  color: Colors.white,
                 ),
-                fillColor: Colors.grey.shade800,
+                fillColor: Colors.pink,
                 filled: true,
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
@@ -232,10 +254,11 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
         elevation: 10,
-        backgroundColor: Colors.grey.shade800,
+        backgroundColor: Colors.pink,
         child: const Icon(
           Icons.add,
           size: 38,
+          color: Colors.white,
         ),
       ),
     );
@@ -249,10 +272,10 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.grey.shade900,
             icon: const Icon(
               Icons.info,
-              color: Colors.grey,
+              color: Colors.white,
             ),
             title: const Text(
-              'Are you sure you want to delete?',
+              '¿Quieres eliminar esto de tu diario?',
               style: TextStyle(color: Colors.white),
             ),
             content: Row(
@@ -267,7 +290,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: const SizedBox(
                         width: 60,
                         child: Text(
-                          'Yes',
+                          'Si',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ),

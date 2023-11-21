@@ -28,7 +28,7 @@ class _EditScreenState extends State<EditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
         child: Column(children: [
@@ -44,10 +44,10 @@ class _EditScreenState extends State<EditScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade800.withOpacity(.8),
+                        color: Colors.lightGreen,
                         borderRadius: BorderRadius.circular(10)),
                     child: const Icon(
-                      Icons.arrow_back_ios_new,
+                      Icons.arrow_back,
                       color: Colors.white,
                     ),
                   ))
@@ -58,23 +58,23 @@ class _EditScreenState extends State<EditScreen> {
                 children: [
                   TextField(
                     controller: _titleController,
-                    style: const TextStyle(color: Colors.white, fontSize: 30),
+                    style: const TextStyle(color: Colors.black, fontSize: 30),
                     decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Title',
-                        hintStyle: TextStyle(color: Colors.grey, fontSize: 30)),
+                        hintStyle: TextStyle(color: Colors.lightGreen, fontSize: 30)),
                   ),
                   TextField(
                     controller: _contentController,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     maxLines: null,
                     decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Type something here',
                         hintStyle: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.lightGreen,
                         )),
                   ),
                 ],
@@ -87,8 +87,8 @@ class _EditScreenState extends State<EditScreen> {
               context, [_titleController.text, _contentController.text]);
         },
         elevation: 10,
-        backgroundColor: Colors.grey.shade800,
-        child: const Icon(Icons.save),
+        backgroundColor: Colors.lightGreen,
+        child: const Icon(Icons.save, color: Colors.white,),
       ),
     );
   }
